@@ -1,12 +1,12 @@
-# Use the official n8n Docker image
-FROM docker.n8n.io/n8nio/n8n
+# Use the official Docker Hub image (RECOMMENDED)
+FROM n8nio/n8n
 
-# Set environment variables
+# Set timezone and port
 ENV N8N_PORT=5678
-ENV GENERIC_TIMEZONE="UTC"
+ENV GENERIC_TIMEZONE=UTC
 
-# Expose the port that n8n listens on
+# Expose port used by n8n
 EXPOSE 5678
 
-# Run n8n
+# Start n8n
 CMD ["n8n"]
